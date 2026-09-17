@@ -24,7 +24,7 @@ $evidencePath = Join-Path $projectRoot "docs\evidencia-manual.json"
 if (-not (Test-Path -LiteralPath $evidencePath)) {
     throw "Execute scripts\demo.ps1 antes de mostrar as evidencias."
 }
-$evidence = Get-Content -LiteralPath $evidencePath -Raw | ConvertFrom-Json
+$evidence = Get-Content -LiteralPath $evidencePath -Raw -Encoding UTF8 | ConvertFrom-Json
 $importantCases = $evidence.tests | Where-Object {
     $_.expectedStatus -in @(401, 403, 409, 422) -or
     $_.case -like "*ADMIN*"
