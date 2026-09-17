@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/campusgigs}
+    username: ${SPRING_DATASOURCE_USERNAME:campusgigs}
+    password: ${SPRING_DATASOURCE_PASSWORD:campusgigs_dev_only}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+campusgigs:
+  jwt:
+    secret: ${CAMPUSGIGS_JWT_SECRET}
+    issuer: campusgigs
+    minutes: 60
+  admin:
+    email: ${CAMPUSGIGS_ADMIN_EMAIL:}
+    password: ${CAMPUSGIGS_ADMIN_PASSWORD:}

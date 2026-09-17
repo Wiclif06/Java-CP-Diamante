@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: campusgigs
+      POSTGRES_USER: campusgigs
+      POSTGRES_PASSWORD: campusgigs_dev_only
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U campusgigs -d campusgigs"]
+      interval: 5s
+      timeout: 3s
+      retries: 15
+  api:
+    build: .
+    ports: ["${CAMPUSGIGS_API_PORT:-8080}:8080"]
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/campusgigs
+      SPRING_DATASOURCE_USERNAME: campusgigs
+      SPRING_DATASOURCE_PASSWORD: campusgigs_dev_only
+      CAMPUSGIGS_JWT_SECRET: ${CAMPUSGIGS_JWT_SECRET:?Set CAMPUSGIGS_JWT_SECRET in .env}
+      CAMPUSGIGS_ADMIN_EMAIL: ${CAMPUSGIGS_ADMIN_EMAIL:-}
+      CAMPUSGIGS_ADMIN_PASSWORD: ${CAMPUSGIGS_ADMIN_PASSWORD:-}
+    depends_on:
+      db:
+        condition: service_healthy
+volumes:
+  postgres_data:
