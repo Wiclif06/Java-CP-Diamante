@@ -1,0 +1,124 @@
+{
+  "generatedAt": "2026-09-16T21:59:10.2696834-03:00",
+  "apiBase": "http://localhost:8081",
+  "serviceId": 1,
+  "tests": [
+    {
+      "case": "Cadastro A com CEP válido",
+      "expectedStatus": 201,
+      "observedStatus": 201,
+      "passed": true,
+      "responseCode": null
+    },
+    {
+      "case": "Cadastro B com CEP válido",
+      "expectedStatus": 201,
+      "observedStatus": 201,
+      "passed": true,
+      "responseCode": null
+    },
+    {
+      "case": "Login A",
+      "expectedStatus": 200,
+      "observedStatus": 200,
+      "passed": true,
+      "responseCode": null
+    },
+    {
+      "case": "Login B",
+      "expectedStatus": 200,
+      "observedStatus": 200,
+      "passed": true,
+      "responseCode": null
+    },
+    {
+      "case": "A publica serviço",
+      "expectedStatus": 201,
+      "observedStatus": 201,
+      "passed": true,
+      "responseCode": null
+    },
+    {
+      "case": "B contrata serviço de A",
+      "expectedStatus": 201,
+      "observedStatus": 201,
+      "passed": true,
+      "responseCode": null
+    },
+    {
+      "case": "Alteração sem token",
+      "expectedStatus": 401,
+      "observedStatus": 401,
+      "passed": true,
+      "responseCode": null
+    },
+    {
+      "case": "Alteração com token adulterado",
+      "expectedStatus": 401,
+      "observedStatus": 401,
+      "passed": true,
+      "responseCode": null
+    },
+    {
+      "case": "B tenta encerrar serviço de A",
+      "expectedStatus": 403,
+      "observedStatus": 403,
+      "passed": true,
+      "responseCode": null
+    },
+    {
+      "case": "A tenta contratar o próprio serviço",
+      "expectedStatus": 409,
+      "observedStatus": 409,
+      "passed": true,
+      "responseCode": null
+    },
+    {
+      "case": "A encerra o próprio serviço",
+      "expectedStatus": 200,
+      "observedStatus": 200,
+      "passed": true,
+      "responseCode": null
+    },
+    {
+      "case": "B tenta contratar serviço encerrado",
+      "expectedStatus": 409,
+      "observedStatus": 409,
+      "passed": true,
+      "responseCode": null
+    },
+    {
+      "case": "Cadastro com CEP inexistente",
+      "expectedStatus": 422,
+      "observedStatus": 422,
+      "passed": true,
+      "responseCode": null
+    },
+    {
+      "case": "Login ADMIN",
+      "expectedStatus": 200,
+      "observedStatus": 200,
+      "passed": true,
+      "responseCode": null
+    },
+    {
+      "case": "A publica segundo serviço",
+      "expectedStatus": 201,
+      "observedStatus": 201,
+      "passed": true,
+      "responseCode": null
+    },
+    {
+      "case": "ADMIN encerra serviço de A",
+      "expectedStatus": 200,
+      "observedStatus": 200,
+      "passed": true,
+      "responseCode": null
+    }
+  ],
+  "totals": {
+    "executed": 16,
+    "passed": 16,
+    "failed": 0
+  }
+}
