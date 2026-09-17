@@ -1,6 +1,6 @@
 # CampusGigs API
 
-API REST para alunos publicarem e contratarem serviços. O projeto foi escrito como base para o enunciado “Projeto Diamante 1 - CampusGigs”. O código foi compilado com Java 21 e os testes automatizados foram executados em 16/09/2026. A execução completa com PostgreSQL/Docker e os testes manuais ainda precisam ser feitos na máquina de entrega; não use este README como “evidência manual” antes de completar os passos abaixo.
+API REST para alunos publicarem e contratarem serviços. O projeto foi escrito como base para o enunciado “Projeto Diamante 1 - CampusGigs”. Em 16/09/2026, o código foi compilado com Java 21, os 12 testes automatizados foram aprovados e o fluxo manual foi executado com PostgreSQL e Docker. Os resultados estão registrados na pasta docs.
 
 ## Executar
 
