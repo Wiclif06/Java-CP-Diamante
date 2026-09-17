@@ -11,7 +11,7 @@ Este roteiro cobre as tarefas que precisam ser executadas na sua sessão do Wind
 
 ## 2 Abrir o projeto
 
-Use a pasta C:\Users\felip\Documents\Codex\2026-09-16\vej\outputs\campusgigs-api.
+Use a pasta onde você extraiu ou clonou o repositório CampusGigs.
 
 Ela já contém um arquivo .env local com contas exclusivamente de demonstração. O .gitignore impede que esse arquivo seja enviado ao GitHub. Mesmo assim, confirme que .env não aparece no git status.
 
